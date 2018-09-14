@@ -2,7 +2,7 @@
 
 Combine mtcnn and facenet to do face recognization for MacOS/Linux/iOS
 
-For MacOS/Linux, check README.md under MacOS
+For MacOS/Linux, check README.md under MacOS directory.
 
 For iOS:
 
@@ -14,10 +14,10 @@ Default sample image:
 
 ![main](https://github.com/xuduo35/ncnn-mtcnn-facenet/blob/master/images/main.jpg)
 
-Red rectangle if detected:
+Red rectangle if recognization:
 
 ![detected](https://github.com/xuduo35/ncnn-mtcnn-facenet/blob/master/images/detected.jpg)
 
-Green dot for landmarks if not detected:
+Green dots for landmarks if not recognization:
 
 ![undetected](https://github.com/xuduo35/ncnn-mtcnn-facenet/blob/master/images/undetected.jpg)
