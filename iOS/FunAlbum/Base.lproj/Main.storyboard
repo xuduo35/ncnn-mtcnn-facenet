@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d03-Rx-Ei5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ZUL-Jh-tqb">
+            <objects>
+                <navigationController id="d03-Rx-Ei5" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="383-7h-SEt">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="G6L-F3-cd7" kind="relationship" relationship="rootViewController" id="2BA-3d-37v"/>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="Detect Face" id="E6o-Ew-iP2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YFr-HH-2kC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2049" y="19"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="T2g-A5-TZz">
+            <objects>
+                <viewController id="G6L-F3-cd7" customClass="MainViewController" customModule="FunAlbum" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dKE-Rj-tlz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xVU-ym-ZUa">
+                                <rect key="frame" x="105" y="434" width="165" height="102"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4K-dC-vcb">
+                                        <rect key="frame" x="0.0" y="0.0" width="165" height="51"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <state key="normal" title="Select Face"/>
+                                        <connections>
+                                            <action selector="onSelectFace:" destination="G6L-F3-cd7" eventType="touchUpInside" id="f8w-GO-7NP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rkh-qH-XuK">
+                                        <rect key="frame" x="0.0" y="51" width="165" height="51"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <state key="normal" title="Detect Face"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="gWl-iF-uIF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Jc-vb-6tW">
+                                <rect key="frame" x="32" y="96" width="311" height="292"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="292" id="Kj8-BD-Xd0"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5Jc-vb-6tW" firstAttribute="centerX" secondItem="xVU-ym-ZUa" secondAttribute="centerX" id="Eh4-XT-Uhs"/>
+                            <constraint firstItem="NAD-nP-hRB" firstAttribute="trailing" secondItem="5Jc-vb-6tW" secondAttribute="trailing" constant="32" id="Ykd-eZ-AwJ"/>
+                            <constraint firstItem="5Jc-vb-6tW" firstAttribute="leading" secondItem="NAD-nP-hRB" secondAttribute="leading" constant="32" id="qrN-d1-zwg"/>
+                            <constraint firstItem="e4K-dC-vcb" firstAttribute="top" secondItem="5Jc-vb-6tW" secondAttribute="bottom" constant="46" id="wll-lG-lUJ"/>
+                            <constraint firstItem="5Jc-vb-6tW" firstAttribute="top" secondItem="NAD-nP-hRB" secondAttribute="top" constant="32" id="yKV-uT-AsQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NAD-nP-hRB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pql-br-TRa"/>
+                    <connections>
+                        <outlet property="imageView" destination="5Jc-vb-6tW" id="NE8-El-efn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QbJ-t5-hvv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-943.20000000000005" y="-164.16791604197903"/>
+        </scene>
+        <!--Detection View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DetectionViewController" customModule="FunAlbum" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3PS-W2-0Y1">
+                                <rect key="frame" x="0.0" y="125" width="375" height="416"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sk2-q6-D9Y">
+                                <rect key="frame" x="90" y="613" width="209" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Switch Camera"/>
+                                <connections>
+                                    <action selector="onSwitchCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GVv-F0-kFx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="3PS-W2-0Y1" id="Bjr-yr-P8p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.600000000000001" y="81.409295352323838"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="gWl-iF-uIF"/>
+    </inferredMetricsTieBreakers>
+</document>

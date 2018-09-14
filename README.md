@@ -1,29 +1,23 @@
 # ncnn-mtcnn-facenet
 
-combine mtcnn and facenet to do face recognization
+Combine mtcnn and facenet to do face recognization for MacOS/Linux/iOS
 
-How to run it:
+For MacOS/Linux, check README.md under MacOS
 
-1. install OpenCV
+For iOS:
 
-2. git clone https://github.com/Tencent/ncnn.git
+Need to add ncnn.framework/opencv2.framework/openmp.framework to project first. Then run in XCode directly.
 
-3. git clone this repo in the same directory with ncnn.
+Reference: https://medium.com/@yiweini/opencv-with-swift-step-by-step-c3cc1d1ee5f1
 
-4. cd ncnn-mtcnn-facenet
+Default sample image:
 
-5. mkdir build
+![main](https://github.com/xuduo35/ncnn-mtcnn-facenet/blob/master/images/main.jpg)
 
-6. cmake ..
+Red rectangle if detected:
 
-7. make
+![detected](https://github.com/xuduo35/ncnn-mtcnn-facenet/blob/master/images/detected.jpg)
 
-8. ./facenet -sample ../yangmi.jpg
+Green dot for landmarks if not detected:
 
-9. ./facenet -facenet your_mp4_file
-
-Integrate code and models from:
-
-https://github.com/moli232777144/mtcnn_ncnn
-
-https://github.com/GRAYKEY/mobilefacenet_ncnn
+![undetected](https://github.com/xuduo35/ncnn-mtcnn-facenet/blob/master/images/undetected.jpg)
