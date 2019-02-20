@@ -1,6 +1,6 @@
 # ncnn-mtcnn-facenet
 
-Combine mtcnn and facenet to do face recognization for MacOS/Linux/iOS
+Combine mtcnn and mobilefacenet to do face recognization for MacOS/Linux/iOS
 
 For MacOS/Linux, check README.md under MacOS directory.
 
